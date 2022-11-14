@@ -12,4 +12,16 @@ class MainActivity : AppCompatActivity() {
         initViews()
     }
 
+    fun initViews(){
+        var button_open=findViewById<Button>(R.id.button_open)
+        button_open.setOnClickListener{
+            openDetailActivity()
+        }
+
+    }
+
+    fun openDetailActivity() {
+        val intent = Intent(this, ActivityDetail::class.java)
+        startActivity(intent)
+    }
 }
